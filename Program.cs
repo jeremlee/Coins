@@ -1,4 +1,4 @@
-namespace DIP_Coins_Activity
+namespace Coins_Activity
 {
     internal static class Program
     {

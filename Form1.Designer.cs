@@ -1,4 +1,4 @@
-﻿namespace DIP_Coins_Activity
+﻿namespace Coins_Activity
 {
     partial class Form1
     {
@@ -31,7 +31,6 @@
             menuStrip1 = new MenuStrip();
             fileToolStripMenuItem = new ToolStripMenuItem();
             openToolStripMenuItem = new ToolStripMenuItem();
-            countCoinsToolStripMenuItem = new ToolStripMenuItem();
             openFileDialog1 = new OpenFileDialog();
             pictureBox1 = new PictureBox();
             pictureBox2 = new PictureBox();
@@ -40,6 +39,7 @@
             label1 = new Label();
             label4 = new Label();
             label5 = new Label();
+            button1 = new Button();
             menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
@@ -47,10 +47,12 @@
             // 
             // menuStrip1
             // 
-            menuStrip1.Items.AddRange(new ToolStripItem[] { fileToolStripMenuItem, countCoinsToolStripMenuItem });
+            menuStrip1.ImageScalingSize = new Size(20, 20);
+            menuStrip1.Items.AddRange(new ToolStripItem[] { fileToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
-            menuStrip1.Size = new Size(1281, 24);
+            menuStrip1.Padding = new Padding(7, 3, 0, 3);
+            menuStrip1.Size = new Size(1464, 30);
             menuStrip1.TabIndex = 0;
             menuStrip1.Text = "menuStrip1";
             // 
@@ -58,22 +60,15 @@
             // 
             fileToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { openToolStripMenuItem });
             fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            fileToolStripMenuItem.Size = new Size(37, 20);
+            fileToolStripMenuItem.Size = new Size(46, 24);
             fileToolStripMenuItem.Text = "File";
             // 
             // openToolStripMenuItem
             // 
             openToolStripMenuItem.Name = "openToolStripMenuItem";
-            openToolStripMenuItem.Size = new Size(103, 22);
+            openToolStripMenuItem.Size = new Size(128, 26);
             openToolStripMenuItem.Text = "Open";
             openToolStripMenuItem.Click += openToolStripMenuItem_Click;
-            // 
-            // countCoinsToolStripMenuItem
-            // 
-            countCoinsToolStripMenuItem.Name = "countCoinsToolStripMenuItem";
-            countCoinsToolStripMenuItem.Size = new Size(85, 20);
-            countCoinsToolStripMenuItem.Text = "Count Coins";
-            countCoinsToolStripMenuItem.Click += countCoinsToolStripMenuItem_Click;
             // 
             // openFileDialog1
             // 
@@ -82,18 +77,20 @@
             // 
             // pictureBox1
             // 
-            pictureBox1.Location = new Point(12, 112);
+            pictureBox1.Location = new Point(14, 149);
+            pictureBox1.Margin = new Padding(3, 4, 3, 4);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(607, 607);
+            pictureBox1.Size = new Size(694, 809);
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox1.TabIndex = 1;
             pictureBox1.TabStop = false;
             // 
             // pictureBox2
             // 
-            pictureBox2.Location = new Point(641, 112);
+            pictureBox2.Location = new Point(733, 149);
+            pictureBox2.Margin = new Padding(3, 4, 3, 4);
             pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(607, 607);
+            pictureBox2.Size = new Size(694, 809);
             pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox2.TabIndex = 2;
             pictureBox2.TabStop = false;
@@ -103,9 +100,9 @@
             label2.AutoSize = true;
             label2.BorderStyle = BorderStyle.FixedSingle;
             label2.Font = new Font("Segoe UI", 11F);
-            label2.Location = new Point(112, 38);
+            label2.Location = new Point(153, 51);
             label2.Name = "label2";
-            label2.Size = new Size(19, 22);
+            label2.Size = new Size(24, 27);
             label2.TabIndex = 5;
             label2.Text = "0";
             // 
@@ -113,19 +110,19 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 11F);
-            label1.Location = new Point(12, 40);
+            label1.Location = new Point(19, 53);
             label1.Name = "label1";
-            label1.Size = new Size(94, 20);
+            label1.Size = new Size(116, 25);
             label1.TabIndex = 6;
-            label1.Text = "Coint Count: ";
+            label1.Text = "Coin Count: ";
             // 
             // label4
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Segoe UI", 11F);
-            label4.Location = new Point(17, 73);
+            label4.Location = new Point(19, 97);
             label4.Name = "label4";
-            label4.Size = new Size(89, 20);
+            label4.Size = new Size(113, 25);
             label4.TabIndex = 8;
             label4.Text = "Total Value: ";
             // 
@@ -134,17 +131,28 @@
             label5.AutoSize = true;
             label5.BorderStyle = BorderStyle.FixedSingle;
             label5.Font = new Font("Segoe UI", 11F);
-            label5.Location = new Point(112, 73);
+            label5.Location = new Point(153, 97);
             label5.Name = "label5";
-            label5.Size = new Size(19, 22);
+            label5.Size = new Size(24, 27);
             label5.TabIndex = 9;
             label5.Text = "0";
             // 
+            // button1
+            // 
+            button1.Location = new Point(300, 51);
+            button1.Name = "button1";
+            button1.Size = new Size(94, 29);
+            button1.TabIndex = 10;
+            button1.Text = "Count";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
+            // 
             // Form1
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1281, 731);
+            ClientSize = new Size(1464, 975);
+            Controls.Add(button1);
             Controls.Add(label5);
             Controls.Add(label4);
             Controls.Add(label1);
@@ -153,8 +161,9 @@
             Controls.Add(pictureBox1);
             Controls.Add(menuStrip1);
             MainMenuStrip = menuStrip1;
+            Margin = new Padding(3, 4, 3, 4);
             Name = "Form1";
-            Text = "Form1";
+            Text = "Coins";
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
@@ -171,11 +180,11 @@
         private OpenFileDialog openFileDialog1;
         private PictureBox pictureBox1;
         private PictureBox pictureBox2;
-        private ToolStripMenuItem countCoinsToolStripMenuItem;
         private Label label2;
         private SaveFileDialog saveFileDialog1;
         private Label label1;
         private Label label4;
         private Label label5;
+        private Button button1;
     }
 }

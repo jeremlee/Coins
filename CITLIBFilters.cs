@@ -41,20 +41,13 @@ namespace ImageProcess2
 		public const float CENT_10 = .10f;
 		public const float CENT_5 = .05f;
 
-		/// <summary>
-		/// Count the total value and number of coins in the image
-		/// </summary>
-		/// <param name="bmp"></param>
-		/// <param name="countLabel"></param>
-		/// <param name="valueLabel"></param>
-		public static void CountCoin(Bitmap bmp, ref Label countLabel, ref Label valueLabel)
+		
+		public static void CountCoins(Bitmap bmp, ref Label countLabel, ref Label valueLabel)
 		{
-			int count = 0; //Expected 64
-			float value = 0; //Expected 46.45
-
+			int count = 0;
+			float value = 0; 
 			int height = bmp.Height;
 			int width = bmp.Width;
-
 			bool[,] visited = new bool[height, width];
 
 			for (int i = 0; i < height; i++)
@@ -67,16 +60,11 @@ namespace ImageProcess2
 						value += Classify(BFS(bmp, ref visited, j, i), ref count);
 					}
 				}
-
 			countLabel.Text = count.ToString();
 			valueLabel.Text = value.ToString("F2");
 		}
 
-		/// <summary>
-		/// Classify what coin given the pixel count
-		/// </summary>
-		/// <param name="pixel"></param>
-		/// <returns></returns>
+		
 		private static float Classify(int pixel, ref int count)
 		{
 			if (pixel >= 18000)
@@ -94,14 +82,7 @@ namespace ImageProcess2
 			return 0; 
 		}
 
-		/// Given a bitmap image in binary format, visited 2d array, initial point(x, y),
-		/// do BFS and count all pixels
-		/// </summary>
-		/// <param name="bmp"></param>
-		/// <param name="visited"></param>
-		/// <param name="x"></param>
-		/// <param name="y"></param>
-		/// <returns>Total pixel count</returns>
+		
 		private static int BFS(Bitmap bmp, ref bool[,] visited, int x, int y)
 		{
 			int height = bmp.Height;

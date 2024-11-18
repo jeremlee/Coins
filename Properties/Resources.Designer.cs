@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace DIP_Coins_Activity.Properties {
+namespace Coins_Activity.Properties {
     using System;
     
     
